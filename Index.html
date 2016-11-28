@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="Scripts/bootstrap/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap/bootstrap.min.js"></script>
+    <script src="Scripts/highcharts/4.2.0/highcharts.js"></script>
+    <script src="Scripts/Server.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div class='btn-toolbar pull-right'>
+                <label class="btn btn-primary btn-file">
+                    Browse <input type="file" id="fileInput" style="display: none;">
+                </label>
+            </div>
+            <h2>Lesson 1</h2>
+        </div>
+
+        
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#menu1">Данные</a></li>
+            <li><a data-toggle="tab" href="#menu2">Инфляция</a></li>
+            <li><a data-toggle="tab" href="#menu3">Сезонность/тренд</a></li>
+            <li><a data-toggle="tab" href="#menu4">Влияние тренда</a></li>
+            <li><a data-toggle="tab" href="#menu5">Регрессии</a></li>
+            <li><a data-toggle="tab" href="#menu6">Множ. регрессии</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="menu1" class="tab-pane fade in active">
+                <div class="col-md-12 scroll-div">
+                    <table class="table table-condensed table-bordered" id="table1"></table>
+                </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="col-md-6 scroll-div">
+                    <table class="table table-condensed table-bordered" id="table2"></table>
+                </div>
+                <div class="col-md-6" style="padding-right: 0">
+                    <table class="table table-striped" id="table2_1">
+                    </table>
+                    <div id="chart2" style="height:350px;"></div>
+                </div>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <div class="col-md-6 scroll-div">
+                    <table class="table table-condensed table-bordered" id="table3"></table>
+                </div>
+                <div class="col-md-6" style="padding-right: 0">
+                    <table class="table table-striped" id="table3_1">
+                    </table>
+                    <div id="chart3" style="height:350px;"></div>
+                </div>
+            </div>
+            <div id="menu4" class="tab-pane fade">
+                <div class="col-md-6 scroll-div">
+                    <table class="table table-condensed table-bordered" id="table4"></table>
+                </div>
+                <div class="col-md-6" style="padding-right: 0">
+                    <div id="chart4" style="height:425px; padding-top: 25px"></div>
+                </div>
+            </div>
+            <div id="menu5" class="tab-pane fade">
+                <div class="col-md-6 scroll-div">
+                    <table class="table table-condensed table-bordered" id="table5"></table>
+                </div>
+                <div class="col-md-6" style="padding-right: 0">
+                    <table class="table table-striped" id="table5_1">
+                    </table>
+                    <div id="chart5" style="height:300px;"></div>
+                </div>
+            </div>
+            <div id="menu6" class="tab-pane fade">
+                <div class="col-md-6 scroll-div">
+                    <table class="table table-condensed table-bordered" id="table6"></table>
+                </div>
+                <div class="col-md-6" style="padding-right: 0">
+                    <table class="table table-striped" id="table6_1">
+                    </table>
+                    <div id="chart6" style="height:350px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .scroll-div {
+        overflow: scroll;
+        height: 450px;
+        padding: 0;
+    }
+</style>
